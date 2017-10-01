@@ -11,6 +11,6 @@ def quadratic_formula(a, b, c):
         return (-b + math.sqrt(discrimiant)) / 2 * a
     else:
         answers = {}
-        answers["solution_one"] = -b + math.sqrt(discrimiant) / 2 * a
-        answers["solution_two"] = -b - math.sqrt(discrimiant) / 2 * a
+        answers["solution_one"] = (-b + math.sqrt(discrimiant)) / (2 * a)
+        answers["solution_two"] = (-b - math.sqrt(discrimiant)) / (2 * a)
         return answers
