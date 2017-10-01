@@ -1,4 +1,4 @@
-Public class gravitationalForceEquation{
+Public class gravitational_force_equation{
 	//Meant to calculate teh gravitational force between two objects
 	//There exists the gravitational constant of the universe G, 6.67 * 10^-11
         
@@ -10,7 +10,7 @@ Public class gravitationalForceEquation{
          */
         
         
-        public static double gravitationalForce(double m1, double m2, double r){
+        public static double calculateGForce(double m1, double m2, double r){
         
                double gforce = (g*m1*m2)/(r*r);
                
