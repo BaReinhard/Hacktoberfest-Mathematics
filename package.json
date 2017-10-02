@@ -2,7 +2,7 @@
     "name": "hacktoberfest-mathematics",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://bareinhard.github.io/Hacktoberfest-Mathematics",
+    "homepage": "http://brettreinhard/Hacktoberfest-Mathematics",
     "dependencies": {
         "axios": "^0.16.2",
         "react": "^16.0.0",
