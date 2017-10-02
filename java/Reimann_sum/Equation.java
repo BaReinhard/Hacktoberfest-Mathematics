@@ -1,55 +1,74 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Stack;
 
 public class Equation
 {
-	
-	ArrayList<String> equation;
-	
+
+	private String infixString;
+	private HashMap<Character, Integer> operatorValues;
+
 	public Equation(String eq)
 	{
-		parseEquation(eq);
+		operatorValues = new HashMap<Character, Integer>();
+		operatorValues.put('+', 0);
+		operatorValues.put('-', 0);
+		operatorValues.put('*', 1);
+		operatorValues.put('/', 1);
+		operatorValues.put('^', 2);
+
+		infixString = convertToInfix(eq);
+		System.out.println(infixString);
+
 	}
-	
-	
-	private void parseEquation(String eq)
+
+	private String convertToInfix(String eq)
 	{
+		String output = "";
 		eq = eq.replaceAll(" ", "");
-		String[] eqAsArray = eq.split("(?=\\+|-)");
-		equation = new ArrayList<String>(Arrays.asList(eqAsArray));
-	}
-	
-	public double evaluateElement(int index, double num)
-	{
-		String elem = equation.get(index);
-		int sign = 1;
-		if(elem.charAt(0) == '-')
+		Stack<Character> operators = new Stack<Character>();
+		for (int i = 0; i < eq.length(); i++)
 		{
-			sign = -1;
-		}
-		
-		String[] elemAsArray = elem.split("(?<=\\*|\\^)|(?=\\*|\\^)");
-		for(int i = 0; i < elemAsArray.length; i++)
-		{
-			
-			if(elemAsArray[i].equals("x"))
+			System.out.println(output + "\t" + operators);
+			char currentChar = eq.charAt(i);
+			if (operatorValues.containsKey(currentChar))
 			{
-				
+				while ((operators.size() != 0 && operators.peek() != '(')
+						&& (operatorValues.get(currentChar) <= operatorValues.get(operators.peek())
+								&& operatorValues.get(currentChar) != 2))
+				{
+					output += operators.pop();
+				}
+				operators.push(currentChar);
+			} else if (currentChar == '(')
+			{
+				operators.push(currentChar);
+			} else if (currentChar == ')')
+			{
+				while (operators.size() != 0 && operators.peek() != '(')
+				{
+					output += operators.pop();
+				}
+				operators.pop();
+			} else
+			{
+				output += currentChar;
 			}
 		}
-		
-		return num;
-		
+		while(operators.size() != 0)
+		{
+			output += operators.pop();
+		}
+		return output;
 	}
 	
+	public void evaluteEquation()
+	{
+		
+	}
+
 	@Override
 	public String toString()
 	{
-		String ans = "";
-		for(String element : equation)
-		{
-			ans += element;
-		}
-		return ans;
+		return infixString;
 	}
 }
