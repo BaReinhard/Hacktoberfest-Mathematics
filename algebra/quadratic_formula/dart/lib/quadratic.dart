@@ -1,0 +1,5 @@
+library quadratic;
+
+import 'dart:math';
+
+part 'quadratic_function.dart';
