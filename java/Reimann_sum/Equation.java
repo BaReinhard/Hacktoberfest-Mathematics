@@ -89,7 +89,6 @@ public class Equation
 		for (int i = 0; i < infixArray.length; i++)
 		{
 			String currentElem = infixArray[i];
-			System.out.println(currentElem + "\t" + operands);
 
 			if (!operatorValues.containsKey(currentElem.charAt(0)))
 			{
