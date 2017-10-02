@@ -1,9 +1,6 @@
 # Hacktoberfest-Mathematics
-Math is fun so let's make some scripts and or programs that use some of your favorite math formulas and functions.
+## Mathematics Folder/File Structure
 
-# Contributors
-## Hacktoberfest-Mathematics
-### Mathematics Folder/File Structure
 **Implementing new File/Directory Structure**
 * Try to keep things as modular as possible, the new file/directory structure should be: 
 ```
