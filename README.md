@@ -1,6 +1,6 @@
 # Hacktoberfest-Mathematics
 Math is fun so let's make some scripts and or programs that use some of your favorite math formulas and functions.
-/*Not Affiliated with Digital Ocean or Hacktoberfest*/
+*Not Affiliated with Digital Ocean or Hacktoberfest*
 !(https://hacktoberfest.digitalocean.com/assets/hacktoberfest-2017-social-card-894a0558dba205f7142f3130c06823d72427a9d751d0f8c7db8a0079397178aa.jpg)
 
 # Contributors
