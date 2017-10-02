@@ -1,21 +1,23 @@
+import javafx.geometry.Point2D;
+
 import java.util.HashSet;
 import java.util.stream.Stream;
 
 public class Cartesian {
-    private HashSet<Point> points = new HashSet<>();
+    private HashSet<Point2D> points = new HashSet<>();
 
     public Cartesian() {
     }
 
-    public HashSet<Point> getPoints() {
+    public HashSet<Point2D> getPoints() {
         return points;
     }
 
-    public boolean addPoint(Point point) {
+    public boolean addPoint(Point2D point) {
         return points.add(point);
     }
 
-    public boolean removePoint(Point point) {
+    public boolean removePoint(Point2D point) {
         return points.remove(point);
     }
 
@@ -31,7 +33,7 @@ public class Cartesian {
         points.clear();
     }
 
-    public Stream<Point> streamOfPoints() {
+    public Stream<Point2D> streamOfPoints() {
         return points.stream();
     }
 
