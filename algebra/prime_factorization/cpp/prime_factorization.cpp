@@ -6,6 +6,7 @@
    
    Note:- 1 has no prime factors
  */
+// CPP-14
  
 #include <bits/stdc++.h>
 
