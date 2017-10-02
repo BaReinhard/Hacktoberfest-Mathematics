@@ -54,4 +54,27 @@ public class ReimannSum
 		}
 		return sum;
 	}
+	
+	/**
+	 * 
+	 * @author seasonguy
+	 * 
+	 * Approximate area under curve using trapezoidal Reimann sum
+	 * 
+	 * @param lowerBound - lowerbound
+	 * @param upperBound - uppoerbound
+	 * @param divisions - Steps
+	 * @param equation - Equation
+	 * @return sum - approximation
+	 */
+	public static double trapezoidalReimannSum(double lowerBound, double upperBound, int divisions, Equation equation)
+	{
+	    double sum = 0;
+	    double dx = (upperBound - lowerBound) / divisions;
+	    for(double i = lowerBound; i < upperBound; i += dx)
+	    {
+	        sum += (equation.evaluateEquation(i+dx) + equation.evaluateEquation(i))*dx/2;
+	    }
+	    return sum;
+	}
 }
