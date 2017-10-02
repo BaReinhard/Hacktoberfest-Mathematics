@@ -90,7 +90,7 @@ public class Equation
 		{
 			String currentElem = infixArray[i];
 
-			if (!operatorValues.containsKey(currentElem.charAt(0)))
+			if (!(operatorValues.containsKey(currentElem.charAt(0)) && currentElem.length() == 1))
 			{
 				operands.push(Double.parseDouble(infixArray[i]));
 			} else
