@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="java/distance_formula"/>
 	<classpathentry kind="src" path="java/Geometry_Triangle_Formulas"/>
 	<classpathentry kind="src" path="java/Linear_Function_Formulas"/>
