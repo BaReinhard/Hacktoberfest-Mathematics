@@ -5,6 +5,7 @@ public class Equation
 {
 
 	private String infixString;
+	private String tempInfixString;
 	private HashMap<Character, Integer> operatorValues;
 
 	public Equation(String eq)
@@ -17,7 +18,7 @@ public class Equation
 		operatorValues.put('^', 2);
 
 		infixString = convertToInfix(eq);
-		System.out.println(infixString);
+		tempInfixString = infixString;
 
 	}
 
@@ -26,17 +27,21 @@ public class Equation
 		String output = "";
 		eq = eq.replaceAll(" ", "");
 		Stack<Character> operators = new Stack<Character>();
+		boolean wasNum = false;
 		for (int i = 0; i < eq.length(); i++)
 		{
-			System.out.println(output + "\t" + operators);
 			char currentChar = eq.charAt(i);
 			if (operatorValues.containsKey(currentChar))
 			{
+				if(wasNum)
+				{
+					output += " ";
+				}
 				while ((operators.size() != 0 && operators.peek() != '(')
 						&& (operatorValues.get(currentChar) <= operatorValues.get(operators.peek())
 								&& operatorValues.get(currentChar) != 2))
 				{
-					output += operators.pop();
+					output += operators.pop() + " ";
 				}
 				operators.push(currentChar);
 			} else if (currentChar == '(')
@@ -44,26 +49,86 @@ public class Equation
 				operators.push(currentChar);
 			} else if (currentChar == ')')
 			{
+				if(wasNum)
+				{
+					output += " ";
+				}
 				while (operators.size() != 0 && operators.peek() != '(')
 				{
-					output += operators.pop();
+					output += operators.pop() + " ";
 				}
 				operators.pop();
 			} else
 			{
 				output += currentChar;
+				wasNum = true;
 			}
 		}
-		while(operators.size() != 0)
+		if(wasNum)
 		{
-			output += operators.pop();
+			output += " ";
+		}
+		while (operators.size() != 0)
+		{
+			output += operators.pop() + " ";
 		}
 		return output;
 	}
-	
-	public void evaluteEquation()
+
+	public double evaluateEquation(double val)
 	{
-		
+		tempInfixString = infixString.replaceAll("x", Double.toString(val));
+		return this.evaluateEquation();
+	}
+
+	public double evaluateEquation()
+	{
+		String[] infixArray = tempInfixString.split(" ");
+
+		Stack<Double> operands = new Stack<Double>();
+		for (int i = 0; i < infixArray.length; i++)
+		{
+			String currentElem = infixArray[i];
+			System.out.println(currentElem + "\t" + operands);
+
+			if (!operatorValues.containsKey(currentElem.charAt(0)))
+			{
+				operands.push(Double.parseDouble(infixArray[i]));
+			} else
+			{
+				double op1 = operands.pop();
+				double op2 = operands.pop();
+				switch (currentElem.charAt(0))
+				{
+					case '+':
+					{
+						operands.push(op2 + op1);
+						break;
+					}
+					case '-':
+					{
+						operands.push(op2 - op1);
+						break;
+					}
+					case '*':
+					{
+						operands.push(op2 * op1);
+						break;
+					}
+					case '/':
+					{
+						operands.push(op2 / op1);
+						break;
+					}
+					case '^':
+					{
+						operands.push(Math.pow(op2, op1));
+						break;
+					}
+				}
+			}
+		}
+		return operands.pop();
 	}
 
 	@Override
