@@ -7,6 +7,5 @@
 	<classpathentry kind="src" path="java/nth_root"/>
 	<classpathentry kind="src" path="java/physics/force"/>
 	<classpathentry kind="src" path="java/quadratic_formula"/>
-	<classpathentry kind="src" path="java/Reimann_sum"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
