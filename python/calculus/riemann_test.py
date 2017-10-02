@@ -36,8 +36,8 @@ def F5(x):
 	return 2 * x ** 3
 
 class RiemannTests(unittest.TestCase):
-	_tolerance = Decimal('0.001')
-	_dx = Decimal('0.000001')
+	_tolerance = Decimal('0.01')
+	_dx = Decimal('0.00001')
 	def test_riemann_sum(self):
 		functions = [(f1, F1), (f2, F2), (f3, F3), (f4, F4), (f5, F5)]
 		test_points = [
@@ -48,9 +48,15 @@ class RiemannTests(unittest.TestCase):
 			(-10, -4), # Detatched from zero, negative
 			(-5, 7) # Across zero
 		]
-		# test_points.extend(map(reversed, test_points)) # TODO handle x1 > x2, ie integrating backwards
 		for (func, antiderivative), (x1, x2) in product(functions, test_points):
 			with self.subTest(function=func.__name__, x1=x1, x2=x2):
 				actual = riemann(func, x1, x2, self._dx)
 				expected = Decimal(antiderivative(x2) - antiderivative(x1))
 				self.assertAlmostEqual(actual, expected, delta=self._tolerance)
+		
+		for (func, antiderivative), (x1, x2) in product(functions, [tuple(reversed(bounds)) for bounds in test_points]): # Test again with x1 and x2 switched
+			with self.subTest(function=func.__name__, x1=x1, x2=x2):
+				actual = riemann(func, x1, x2, self._dx)
+				expected = Decimal(antiderivative(x2) - antiderivative(x1))
+				self.assertAlmostEqual(actual, expected, delta=self._tolerance)
+
