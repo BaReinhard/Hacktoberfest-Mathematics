@@ -6,12 +6,7 @@ public class RelativityEquation {
 	private static final double SPEED_LIGHT = 299792458;
 
 	public static double getEnergy(double mass) {
-		double energy = mass * Math.pow( SPEED_LIGHT, 2 );
-		return energy;
+		//E = mc2
+		return mass * Math.pow( SPEED_LIGHT, 2 );
 	}
-
-	public static void main(String[] args) {
-		System.out.println( getEnergy( 10 ) );
-	}
-
 }
