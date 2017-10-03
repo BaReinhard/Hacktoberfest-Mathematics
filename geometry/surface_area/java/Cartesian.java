@@ -55,6 +55,7 @@ public class Cartesian {
         public boolean addLine(Line2D line2D) {
             return lines.add(line2D);
         }
+        
         public boolean removeLine(Line2D line2D) {
             return lines.remove(line2D);
         }
