@@ -17,3 +17,12 @@ def trapezoid(base_one, base_two, height):
     
 def circle(radius):
     return math.pi * (radius**2)
+
+def rhombus(diag_len_1,diag_len_2):
+    return 0.5 * (diag_len_1 * diag_len_2)
+
+def parallelogram(base_one,height):
+    return base_one*height
+
+
+
