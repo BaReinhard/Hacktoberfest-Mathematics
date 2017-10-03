@@ -1,28 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Germania+One|Poiret+One');
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 5s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-image: radial-gradient(circle, #3241a6 0, #202a6b 120%);
+    height: 150px;
+    padding: 20px;
+    color: #ff9465;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+.content-container {
+    width: 100%;
+    background-color: #fefefe;
+}
+.language {
+    font-style: italic;
+}
+.file-name {
+    font-style: italic;
+}
+.content {
+    width: 100%;
+    margin: 40px auto;
+    text-align: left;
+    background-color: #eee;
+    padding: 30px;
+}
+.sub-content {
+    margin: 0 auto;
+    width: 95%;
+    box-sizing: border-box;
+}
+.language-sub-content {
+    margin: 0 auto;
+    width: 95%;
+    box-sizing: border-box;
+}
+pre {
+    background-color: #ddd;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.language-subcontent-header,
+.file-name-header {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2em;
+}
+.subcontent-header {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6em;
+}
+.content-header {
+    font-family: 'Audiowide', cursive;
+    font-style: bold;
+    font-size: 2em;
+}
+.hacksvg {
+    transform: translate(0.5);
 }
