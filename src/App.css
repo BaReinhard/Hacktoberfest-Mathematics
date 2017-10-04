@@ -200,4 +200,11 @@ pre {
         padding: 10px;
         margin: 2px;
     }
+    .App-logo {
+        position: relative;
+        top: -20px;
+        animation: none;
+        height: 200px;
+        width: 75vw;
+    }
 }
