@@ -201,10 +201,16 @@ pre {
         margin: 2px;
     }
     .App-logo {
-        position: relative;
-        top: -20px;
+        display: block;
         animation: none;
+        margin: auto auto;
         height: 200px;
         width: 75vw;
+    }
+    .App-header {
+        background-image: radial-gradient(circle, #3241a6 0, #202a6b 120%);
+        height: 250px;
+        padding: 20px;
+        color: #ff9465;
     }
 }
