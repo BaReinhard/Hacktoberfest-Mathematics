@@ -2,6 +2,7 @@
  * Contains classes which construct a mathematical polynomial.
  */
 package mypolynomial;
+
 import java.io.*;
 import java.util.*;
 
@@ -13,7 +14,8 @@ import java.util.*;
 public class PolynomialIO {
 
 	/**
-	 * Controls the flow of construction of a mathematical polynomial.
+	 * Controls the flow of construction of a mathematical polynomial. The maximum
+	 * number of coefficients is 10.
 	 * 
 	 * @throws IOException
 	 *             if there are errors with input/output.
@@ -27,12 +29,9 @@ public class PolynomialIO {
 			for (int count = 0; count <= 10; count++) // makes sure number of coefficients does not exceed 10
 			{
 				polynomial.setUserInput(br.readLine());
-				if (polynomial.getUserInput().isEmpty())
-				{
+				if (polynomial.getUserInput().isEmpty()) {
 					break;
-				}
-				else
-				{
+				} else {
 					polynomial.addCoefficient(polynomial.getUserInput());
 				}
 			}
