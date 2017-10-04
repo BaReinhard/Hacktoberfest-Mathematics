@@ -1,6 +1,6 @@
 // For a geometric progression a + ar + ar^2 + ar^3 + ...
 // with a being the scale factor and r being the common ratio
-1+ 1*2 +1*4
+
 // This function calculates the nth term
 function nth_term(a, r, n){
 	return  a * Math.pow(r, n - 1);
