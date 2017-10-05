@@ -7,24 +7,24 @@
 
 // ES5
 
-function factorial(n){
-  if(n === 0)
-    return 1
-  else
-    return n * factorial(n - 1)
+function factorial(n) {
+    if (n === 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
 }
 
-function combination(n, r){
-  return factorial(n)/(factorial(r) * factorial(n-r))
+function combination(n, r) {
+    return factorial(n) / (factorial(r) * factorial(n - r));
 }
 
 // ES6
 
 let factorial = (n) => {
-  if(n === 0)
-    return 1
-  else
-    return n * factorial(n - 1)
-}
+    if (n === 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+};
 
-let combination = (n, r) => factorial(n)/(factorial(r) * factorial(n-r))
+let combination = (n, r) => factorial(n) / (factorial(r) * factorial(n - r));
