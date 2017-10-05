@@ -1,5 +1,9 @@
 /bin/
+<<<<<<< HEAD
 
 # OS X
 *.DS_Store
 
+=======
+/node_modules
+>>>>>>> 8d0e99def711c42e3fe5bb6099684026b9e86998
