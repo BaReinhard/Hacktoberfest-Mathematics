@@ -15,7 +15,7 @@ var dotProduct = function(a) {
   return function(b) {
     return zip(a)(b)
       .map(function(pair) {
-        return pair[0] * pair[0];
+        return pair[0] * pair[1];
       })
       .reduce(function(memo, val) {
         return memo + val;
