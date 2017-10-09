@@ -4,7 +4,7 @@
  * A regular hexagon resembles a convex figure with sides of the same length, and comprises of internal angles of 120 degrees.
  * The area of hexagon is determined using the side and radius of it i.e. s and r.
  *
- * @author Shrikrushna Atkalikar (atkalikar@optymyze.com)
+ * @author Shrikrushna Atkalikar
  */
 public class HexagonArea {
 
