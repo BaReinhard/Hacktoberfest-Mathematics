@@ -24,5 +24,12 @@ def rhombus(diag_len_1,diag_len_2):
 def parallelogram(base_one,height):
     return base_one*height
 
+def cylinder(radius,height):
+    return 2.0 * math.pi* radius * height;
 
+def sphere(radius):
+    return 4 * math.pi * (radius**2);
+
+def sector(radius,angle):
+    return radius*radius*angle*(1./2)
 
