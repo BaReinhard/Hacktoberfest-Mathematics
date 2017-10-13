@@ -30,4 +30,18 @@ public class VectorOperations {
         }
     
     }
+    
+    public static double dotProduct(double[] vector1, double[] vector2){
+    double product = 0.0;
+        if(vector1.length==vector2.length){
+        for(int i = 0; i<vector1.length; i++){
+        	  product+=vector1[i]*vector2[i];
+        	}
+            return product;
+        }else{
+          System.out.println("Dimensions of vectors do not match!");
+          return null;
+        }
+    
+    }
 }
