@@ -18,13 +18,11 @@ def vector_projection(u, v):
     return Vector(entries)
 
 def zero (v):
-    all_zero = True
-
     for entry in v:
-        if (entry != 0):
-            all_zero = False
+        if entry != 0:
+            return False
 
-    return all_zero
+    return True
 
 def gram_schmidt_process(v):
     u = []
