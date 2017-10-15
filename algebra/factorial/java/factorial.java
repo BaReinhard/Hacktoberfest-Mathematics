@@ -21,14 +21,9 @@ public class factorial {
     public static int factorial(int n){
         int product = 1;
         
-        if (n == 0){
-            product = 1;
-        } else{
-        
-        for (int i = 1; i <= n; i++ ){
-           product = product*i;
-        }
-        
+        for (int i = 0; i <= n-1; i++ )
+        {
+           product = (product*(i+1));
         }
         
         return product;
