@@ -9,7 +9,7 @@
  *
  * @author Shrikrushna Atkalikar
  */
-class WaveLengthCalculator {
+public class WaveLengthCalculator {
 
     /**
      * This method calculates the wavelength if Wave Velocity and Frequency is given.
