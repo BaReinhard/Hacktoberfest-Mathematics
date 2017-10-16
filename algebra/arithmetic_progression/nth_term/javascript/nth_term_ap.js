@@ -5,8 +5,3 @@
 function nth_term(a, d, n){
 	return  a + (n - 1) * d;
 }
-
-// This function calculates the sum of the first n terms
-function sum_of_first_n(a, d, n){
-	return n / 2 * (2 * a + (n - 1) * d);
-}
