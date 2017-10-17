@@ -9,9 +9,20 @@ public class factorial {
     public static int factorial(int n){
         int product = 1;
         
+<<<<<<< HEAD
+        for (int i = 0; i <= n-1; i++ )
+        {
+           product = (product*(i+1));
+        }
+        
+        return product;
+    }
+    
+=======
         for (int i = 0; i <= n-1; i++ ){
             product = (product*(i+1));
             }
     return product;
     }    
+>>>>>>> 277d5c140dd8520e7a91521edb90edb1d2d1fae9
 }
