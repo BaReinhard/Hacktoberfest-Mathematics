@@ -1,4 +1,4 @@
-function taylorSine(degree, x){
+function taylor_sine(degree, x){
 	
 	//degree being the number of terms in the sum
 	//x being the value whose sine is being calculated
