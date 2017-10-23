@@ -11,3 +11,7 @@ def getRadius(center_x, center_y, point_x, point_y):
 ##returns the length of arc given the angle in degrees and radius
 def arc_length(radius,angle):
     return (angle*radius*math.pi*(1/180))
+
+##returns the length of the circle chord given the subtended angle at the center in degrees and radius
+def chord_length(radius,angle):
+    return (2*radius*math.sin(angle*math.pi/360)
