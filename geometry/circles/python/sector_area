@@ -1,0 +1,7 @@
+
+## returns the area of a sector, given the radius of the circle and the angle the sector subtends at the center
+def area_of_a_sector(radius, angle):
+  return (angle*3.14*radius*radius)/360
+  
+  
+  
