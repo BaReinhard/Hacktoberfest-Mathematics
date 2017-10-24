@@ -1,0 +1,8 @@
+6
+16 24 72 44 62 28
+
+
+
+
+In the first line the input is the length of array.
+In the second line the input is the array of integers whose lcm and hcf to be found out.
