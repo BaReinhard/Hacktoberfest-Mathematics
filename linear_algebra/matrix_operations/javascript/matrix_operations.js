@@ -25,7 +25,7 @@ const multiply = function(a,b) {
   if (b.length !== a[0].length) {
     throw Error("Matrices must be of sizes [x,y] and [y,z]")
   }
-  return a.map((line) => line.map((_,i) => vector_dot_multiplication(line, b.map((col) => col[i]))));
+  return a.map((line) => line.map((_,i) => dot_multiply(line, b.map((col) => col[i]))));
 }
 
 /***
@@ -43,4 +43,4 @@ const transpose = function(a) {
 }
 
 
-export {add_matrices, dot_multiply, multiply, multiply_scalar, transpose};
+module.exports = {add, dot_multiply, multiply, multiply_scalar, transpose}
