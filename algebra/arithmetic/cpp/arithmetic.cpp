@@ -50,18 +50,43 @@ public:
 
     return sum; // returning the sum
   }
+
+  static int max_digit(int value)
+  {
+      int maxi = 0;
+      while (value !=0) {
+        if (value % 10 > maxi)
+            maxi = value % 10;
+        value /= 10;
+      }
+      return maxi;
+  }
+
+  static int min_digit(int value)
+  {
+      int mini = 9;
+      while (value !=0) {
+        if (value % 10 < mini)
+            mini = value % 10;
+        value /= 10;
+      }
+      return mini;
+  }
 };
 
 int main() {
 
   // declaring and initialising the variable
-  int value;
-  value = 169;
+  long long value;
+  cout << "Please input the desired number to be processed: ";
+  cin >> value;
 
   // printing desired value from desired functions and printing line by line
   cout<<"cube root of "<<value<<" : "<<arithmetic::cube_root(value)<<endl;
   cout<<"square root of "<<value<<" : "<<arithmetic::square_root(value)<<endl;
   cout<<"sum of "<<value<<" : "<<arithmetic::digit_sum(value)<<endl;
+  cout<<"greatest digit of "<<value<<" : "<<arithmetic::max_digit(value)<<endl;
+  cout<<"smallest digit of "<<value<<" : "<<arithmetic::min_digit(value)<<endl;
 
 
   // return 0 to OS for successful execution
