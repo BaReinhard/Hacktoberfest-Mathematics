@@ -8,9 +8,8 @@ int main()
     cout << "Enter a positive integer: ";
     cin >> n;
 
-    for (int i = 1; i <= n; ++i) {
-        sum += i;
-    }
+	//the sum of the first n numbers can be simplified as (n^2-n)/2
+	n=((n*n)-n)/2
 
     cout << "Sum = " << sum;
     return 0;
