@@ -15,7 +15,7 @@ var magnitude = function(vector) {
     vector.reduce(function(memo, component) {
       return memo + component * component;
     }, 0)
-  );
+  );Geyw
 };
 
 /**
