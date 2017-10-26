@@ -31,3 +31,7 @@ def transpose_matrix(A):
         for j in range(len(A[0])):
             C[j][i] = A[i][j]
     return C
+
+def matrix_zeros(x):
+    C = [[0]*x for i in range(x)]
+    return C
