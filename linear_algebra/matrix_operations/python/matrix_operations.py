@@ -24,3 +24,10 @@ def multiply_scalar(A, k):
         for j in range(len(A[0])):
             C[i][j] = A[i][j] * k
     return C
+
+def transpose_matrix(A):
+    C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            C[j][i] = A[i][j]
+    return C
