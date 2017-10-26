@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# <h3 align="center"> CPSC 103 Final Project Code - Creating a Demographic Transition Model for Germany, China and Canada</h3> 
+# <h3 align="center"> Creating a Demographic Transition Model for Germany, China and Canada</h3> 
 
 # In[1]:
 
