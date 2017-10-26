@@ -1,0 +1,14 @@
+def factorial(fact_num):
+    f = 1
+
+    if fact_num < 0:
+       return -1
+
+    for i in range(2, fact_num+1):
+        f *= i;
+
+    return f
+
+
+
+print(factorial(7))
