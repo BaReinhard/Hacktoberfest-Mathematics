@@ -1,6 +1,6 @@
 import java.lang.*;
 
-class torque {
+public class torque {
   /*
    *@param a - the angular acceleration
    *@param i - the moment of inertia
