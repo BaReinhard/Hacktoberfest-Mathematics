@@ -1,0 +1,18 @@
+import math
+value = input("Enter integer or decimal values and done when finished")
+array_of_values = []
+sum = 0
+while (value != "done"):
+    try:
+        array_of_values.append(float(value))
+        sum += value
+    except TypeError:
+     value = input("Enter integer or decimal values and done when finished");
+mu = sum / len(array_of_values)
+x = 0
+for i in array_of_values:
+    x += (float(i) - mu)**2
+sigma = math.sqrt(x/len(array_of_values))
+print(sigma)
+    
+
