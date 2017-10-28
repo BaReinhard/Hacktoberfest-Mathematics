@@ -1,7 +1,16 @@
 import math
 
 def calculate_distance(u, v):
-    """Distance between points u and v
-    Usage: calculate_distance( (1,1), (2,2) ) # sqrt(2)
+    """Distance between points u and v, where u and v are points in n dimensional
+    space, denoted by lists/tuples/arrays.
+    Usage: calculate_distance( <first point>, <second point>)
     """
-    return math.sqrt( (u[0]-v[0])**2 + (u[1]-v[1])**2 )
+
+    if len(u) != len(v):
+        raise ValueError('Dimensionality of points doesn\'t match')
+
+    retVal = 0
+    for i in xrange(len(u)):
+        retVal += (u[i] - v[i])**2
+
+    return math.sqrt(retVal)
