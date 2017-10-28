@@ -29,4 +29,28 @@ public class Moment_of_Inertia{
             return MI;
         }
     }
-       
+       /**
+        *Calculates the moment of inertia of an axis parallel to the center of mass using the parallel axis theorem
+        *@param m mass of the shape
+        *@param r radius (if disc or cylinder), length (if rod)
+        *@param d distance from center of mass to the parallel axis
+        *@param shape the shape corresponding to the correct Icm method
+        *@return parallel_axis the moment of inertia of the parallel axis
+        */
+        public static double MI_Parallel_Axis(double m, double r, double d, String shape) {
+                double momentCM;
+                double parallel_axis;
+                if (shape.equals("rod") || shape.equals("Rod")) {
+                        momentCM = MI_rod(m, r);
+                } else if (shape.equals("disc") || shape.equals("Disc") || shape.equals("Circular Disc")) {
+                        momentCM = MI_cirDisc(m, r);
+                } else if (shape.equals("cylinder") || shape.equals("Cylinder")) {
+                        momentCM = MI_Cylinder(m, r);
+                } else {
+                        System.out.println("Shape not recognized");
+                        return;
+                }
+                parallel_axis = momentCM + (m * d * d)/2;
+                return parallel_axis;
+        }
+                    
