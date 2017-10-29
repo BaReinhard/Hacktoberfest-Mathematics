@@ -1,4 +1,4 @@
-# importing modules
+"""importing modules"""
 import math
 
 # defining class arithmetic
