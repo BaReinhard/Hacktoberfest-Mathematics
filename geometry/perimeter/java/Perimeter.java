@@ -61,13 +61,14 @@ public class Perimeter
     
     /**
      * Find perimeter of a trapezoid.
-     * @param height
-     * @param base1
-     * @param base2
+     * @param side1 (a)
+     * @param side1 (b)
+     * @param side1 (c)
+     * @param side1 (d)
      * @return perimeter
      */
-    double trapezoid(double height, double base1, double base2)
+    double trapezoid(double a, double b, double c, double d)
     {
-    	return height * (base1 + base2)/2;
+    	return a+b+c+d;
     }
 }
