@@ -6,6 +6,14 @@ def add_matrix(A, B):
             C[i][j] = A[i][j] + B[i][j]
     return C
 
+def sub_matrix(A, B):
+    assert len(A) == len(B) and len(A[0]) == len(B[0])
+    C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(B)):
+        for j in range(len(B[0])):
+            C[i][j] = B[i][j] - A[i][j]
+    return C
+
 
 def multiply_matrix(A, B):
     assert len(A[0]) == len(B)
