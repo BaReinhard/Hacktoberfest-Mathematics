@@ -1,1 +1,9 @@
+from math import sqrt
 
+def area(side_a,side_b,side_c):
+    if side_a==0 or side_b==0 or side_c==0:
+        return 0
+    else:
+        s=(side_a+side_b+side_c)/2
+        area=sqrt(s*(s-side_a)*(s-side_b)*(s-side_c))
+        return area
