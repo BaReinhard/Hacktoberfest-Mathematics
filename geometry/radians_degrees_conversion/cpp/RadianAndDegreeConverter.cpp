@@ -12,7 +12,7 @@ double radiansToDegrees(double rad) {
 }
 
 int main() {
-	cout << degreesToRadians(60) << endl;
-	cout << radiansToDegrees(M_PI/3);
-	return 0;
+  cout << degreesToRadians(60) << endl;
+  cout << radiansToDegrees(M_PI/3);
+  return 0;
 }
