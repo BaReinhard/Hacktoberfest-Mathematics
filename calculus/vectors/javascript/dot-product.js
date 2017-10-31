@@ -1,11 +1,24 @@
-const zip = ar1 => ar2 => ar1.map((val, index) => [val, ar2[index]]);
+var zip = function(ar1) {
+  return function(ar2) {
+    return ar1.map(function(val, index) {
+      return [val, ar2[index]];
+    });
+  };
+};
 
 /**
  * Curried dotProduct function.
  * @param {number[]} a An arbitrary-length array which represents a vector.
  * @returns {function(number[]):number} a function accepting the second array.
  */
-const dotProduct = a => b =>
-  zip(a)(b)
-    .map(([c1, c2]) => c1 * c2)
-    .reduce((memo, val) => memo + val, 0);
+var dotProduct = function(a) {
+  return function(b) {
+    return zip(a)(b)
+      .map(function(pair) {
+        return pair[0] * pair[1];
+      })
+      .reduce(function(memo, val) {
+        return memo + val;
+      }, 0);
+  };
+};
