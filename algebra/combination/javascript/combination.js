@@ -40,6 +40,7 @@ function sequence_product(s, e) {
     var ret = s, cur = s + 1;
     while(cur <= e) {
         ret *= cur;
+        cur++;
     }
     return ret;
 }
