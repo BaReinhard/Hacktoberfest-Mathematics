@@ -28,3 +28,23 @@ let factorial = (n) => {
 };
 
 let combination = (n, r) => factorial(n) / (factorial(r) * factorial(n - r));
+
+
+
+// speedup version 
+
+function sequence_product(s, e) {
+    if (s > e) {
+        throw 'Invalid Sequence: sequence start must be smaller or equal to sequence end';
+    }
+    var ret = s, cur = s + 1;
+    while(cur <= e) {
+        ret *= cur;
+    }
+    return ret;
+}
+
+function fast_combination(n, r) {
+    var _r = ((n - r) > r) ? r - r : n;
+    return sequence_product(n - r + 1, n) / sequence_product(1, n - r);
+}
