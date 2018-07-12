@@ -1,0 +1,64 @@
+def pell(d):
+    """Finds the minimal solution for x^2 - D*y^2 = 1,
+    for a given D, using continued fraction expansion of square root of D."""
+    
+    import fractions as frac
+    from math import floor
+    
+    #find period of square root of D
+    squares = [x**2 for x in range(1, d)]
+
+    period  = {}
+    
+    for n in range(d, d+1):
+        if n in squares:
+            return ValueError
+        fractions = []    
+        x = floor(n**0.5)
+        c = n - x**2
+        a = floor(((n**0.5)+x)/c)
+        b = x - a*c
+        fractions.append([a, b, c])
+        t = 1
+        while True:
+            
+            c = (n - b**2)/c
+            a = floor((n**0.5 - b)/c)
+            b = (-b) - (a*c)
+            if [a, b, c] in fractions:
+                period[n] = len(fractions)
+                break
+            else:
+                fractions.append([a, b, c])
+    
+    #determine the correct convergent
+    try:
+        if (period[n] -1) % 2 != 0:
+            r =  (period[n] -1) 
+        else:
+            r = 2*(period[n] -1) + 1
+    except KeyError:
+        raise KeyError
+    
+    #compile list of convergents
+    e = []
+    e.append(x)
+    for times in range(3):
+        for x in fractions:
+            e.append(x[0])
+    
+    convergent = []
+    
+    for n in range(len(e)): 
+        if n == 0:
+            convergent.append(e[n])
+        else:
+            i = n 
+            step = frac.Fraction(e[i]) 
+            while i > 0: 
+                step = frac.Fraction(frac.Fraction(1.0)/step) + frac.Fraction(e[i-1])
+                i -= 1
+            convergent.append((step))            
+    
+    #get final solutions
+    return convergent[r] 
