@@ -1,6 +1,7 @@
 
 /**
  * Perimeter class returns the perimeter of basic geometry shapes
+ * Finds perimeter of geometric solids
  */
 public class Perimeter 
 {
@@ -12,6 +13,12 @@ public class Perimeter
     double circle(double radius)
     {
         return 2 * Math.PI * radius;
+	System.out.println("triangle: ");
+	System.out.println(triangle);
+	System.out.println("parallelogram: ");
+	System.out.println(parallelogram);
+	System.out.println("Square: ");
+	System.out.println(Square);
     } 
     
     /**
