@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+double pot_energy(double mass, double height){
+    return mass * 9.81 * height;
+}
+
+double kinetic_energy(double mass, double speed){
+    return 0.5 * mass * speed * speed;
+}
+
+double power(double work, double time){
+    return work / time;
+}
+
+int main()
+{
+    
+    return 0;
+}
