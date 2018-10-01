@@ -21,3 +21,6 @@ def v_squared(v_0, a, delta_x):
 # if we don't know acceleration
 def delta_x(v, v_0, t):
     return 0.5 * t * (v + v_0)
+
+def delta_x(v,t,a):
+    return v*t-0.5*a*(t**2)
