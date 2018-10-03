@@ -19,7 +19,7 @@ def circle(radius):
     return math.pi * (radius**2)
 
 def cylinder(radius,height):
-    return 2.0 * math.pi* radius * height;
+    return (2.0 * math.pi* radius * height) + (2.0 * math.pi * (radius**2));
 
 def sphere(radius):
     return 4 * math.pi * (radius**2);
