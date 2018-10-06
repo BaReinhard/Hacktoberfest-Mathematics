@@ -18,5 +18,8 @@ def pyramid_volume(width, length, height):
 def sphere_volume(radius):
     return (4./3)*math.pi*(radius**2)
 
-def ellipsoid_volume(r1,r2,r3)
+def ellipsoid_volume(r1,r2,r3):
     return (4./3)*math.pi*r1*r2*r3
+
+def pyramid_trunk(heigth, maxBase, minBase):
+    return((heigth/3) * (maxBase+(math.sqrt(maxBase*minBase))+minBase))
