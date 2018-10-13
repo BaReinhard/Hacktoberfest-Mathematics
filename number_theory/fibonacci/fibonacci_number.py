@@ -9,6 +9,6 @@ def fib(n):
     temp = a
     a = a + b
     b = temp
-    n--
+    n -= 1
   
   return b
