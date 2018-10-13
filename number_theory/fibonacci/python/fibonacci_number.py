@@ -3,7 +3,7 @@ Returns the n-th number of the Fibonacci Sequence
 '''
 
 def fib(n):
-  a = 1, b = 0
+  a, b = 1, 0
   
   while n >= 0:
     temp = a
