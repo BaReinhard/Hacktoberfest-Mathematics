@@ -20,6 +20,12 @@ public class HexagonArea {
         checkArgument(s, "radius");
         return 3 * s * r;
     }
+    
+    /**
+    *check the arguments
+    *@param value 
+    *@param param
+    */
 
     private static void checkArgument(double value, String param) {
         if(value <= 0) {
