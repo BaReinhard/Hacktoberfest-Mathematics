@@ -1,6 +1,7 @@
 public class Triangle {
     
     public static final double DEGREES = 180d;
+    public static final RIGHT_ANGLE_DEGREES = 90d;
     
     /**
      * 
