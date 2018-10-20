@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class AreaOfCircle {
+public class CircleArea {
    public static void main(String args[]){
       int radius;
       double area;
