@@ -13,7 +13,7 @@ class arithmetic        // an arithmetic class for some functions that are imple
 {
   // given public access so that it can be used out side the class
 public:
-  // static function used so that we don;t have to define the object
+  // static function used so that we don't have to define the object
 
   /*
       returns the cube root of a number
