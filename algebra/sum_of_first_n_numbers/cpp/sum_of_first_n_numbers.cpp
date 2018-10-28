@@ -3,15 +3,11 @@ using namespace std;
 
 int main()
 {
-    int n, sum = 0;
+    int n;
 
     cout << "Enter a positive integer: ";
     cin >> n;
 
-    for (int i = 1; i <= n; ++i) {
-        sum += i;
-    }
-
-    cout << "Sum = " << sum;
+    cout << "Sum = " << (n*(n+1))/2;     //sum of first n numbers
     return 0;
 }
