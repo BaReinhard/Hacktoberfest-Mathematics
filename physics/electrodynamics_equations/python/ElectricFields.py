@@ -1,6 +1,16 @@
 import math
 class ElectricFields(object):
     E_FIELD_CONST = 8.854e-12
+    k=9*pow(10,9)
+    
+    def force(q1,q2,r):
+        if(radius <= 0 ):
+            raise ValueError("Never seen negative radius.")
+         return (k*q1*q2)/(r*r)
+    
+    def E_field(Q):
+        return force(Q,1,1)/Q
+    
     def field_of_homogeneous_spehere_at(self, electricCharge, radius):
         if(radius <= 0 ):
             raise ValueError("Never seen negative radius.")
