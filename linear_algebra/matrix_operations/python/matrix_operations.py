@@ -17,6 +17,32 @@ def multiply_matrix(A, B):
                 C[i][j] += A[i][k] * B[k][j]
     return C
 
+def transpose_matrix(A):
+      C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            C[i][j] = A[j][i]
+    return C
+
+def upper_triangle(A):
+        C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if i==j or i<j:
+                C[i][j]=A[i][j]
+               else:
+                C[i][j]=-1
+    return C
+
+def lower_triangle(A):
+        C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            if i==j or i>j:
+                C[i][j]=A[i][j]
+               else:
+                C[i][j]=-1
+    return C
 
 def multiply_scalar(A, k):
     C = [[0]*len(A[0]) for i in range(len(A))]
