@@ -68,6 +68,7 @@ public class Perimeter
      */
     double trapezoid(double height, double base1, double base2)
     {
-    	return height * (base1 + base2)/2;
+    	return 2*Math.sqrt(height*height+((base1-base2)/2*(base1-base2)/2))+base1+base2;
     }
+   
 }
