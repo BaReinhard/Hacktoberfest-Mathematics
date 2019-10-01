@@ -18,7 +18,3 @@ function calculateSD(population){
 
     return Math.sqrt(sumSquareError/ population.length);
 }
-
-let population = [-9, -7, -4, -1, 0, 2, 7, 9, 12]
-
-console.log(calculateSD(population));
