@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StandardDeviation",
+            "request": "launch",
+            "mainClass": "StandardDeviation"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - standardDeviation",
+            "request": "launch",
+            "mainClass": "standardDeviation"
+        }
+    ]
+}
