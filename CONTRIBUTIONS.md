@@ -3,7 +3,17 @@
 
 **Implementing new File/Directory Structure**
 * Try to keep things as modular as possible, the new file/directory structure should be: 
-```
-/area_of_mathematics/general_formula/formula/language/file
-ex: /algebra/distance_formula/3d_distance_formula/java/3d_distance_formula.java
-```
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+     int num1 , num2 , sum ;
+     cout << "Enter 2 numbers: ";
+     cin >> num1 >> num2 ;
+     sum = num1 + num2;
+     cout << "Their sum is " << sum;
+     return 0;
+}
