@@ -4,7 +4,7 @@ using namespace std;
 int factorial(int);
 
 int main() {
-	int n,fact;
+	int n,fact {0}; //initializing the variables
 	cout<<"Enter the number whose factorial is to found : ";
 	cin>>n;
 	cout<<endl;
@@ -23,4 +23,6 @@ int factorial(int n)
 	{
 		return n*factorial(n-1);
 	}
+        return 0;
 }
+ 
