@@ -1,4 +1,4 @@
-public class Magnitude {
+public class VectorOperations {
 	 public static void main(String[] args){
 		 	double[] vec1 = {1.0d,2.0d,3.0d};
 		 	double[] vec2 = {0.0d,1.0d,3.0d};
