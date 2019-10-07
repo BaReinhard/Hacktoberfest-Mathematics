@@ -18,7 +18,7 @@ public:
   /*
       returns the cube root of a number
   */
-  static int cube_root(int val)
+  static double cube_root(int val)
   {
     if (val < 0)  // return -ve cube root for -ve numbers else return +ve cube root
       return -cbrt(val);
@@ -29,7 +29,7 @@ public:
   /*
       returns the square root of a number
   */
-  static int square_root(int val)
+  static double square_root(int val)
   {
       return sqrt(val); // gives the wrong value if value < 0 and also return the value in whole number
   }
@@ -55,9 +55,13 @@ public:
 int main() {
 
   // declaring and initialising the variable
+  cout<<"Enter the number to find it square root,cube root and sum of its digit";
   int value;
-  value = 169;
-
+  cin>>value;
+  arithmetic ob;
+  double sq_rt=ob.square_root(value);
+  double cb_rt=ob.cube_root(value);
+  int sum=ob.digit_sum(value);
   // printing desired value from desired functions and printing line by line
   cout<<"cube root of "<<value<<" : "<<arithmetic::cube_root(value)<<endl;
   cout<<"square root of "<<value<<" : "<<arithmetic::square_root(value)<<endl;
