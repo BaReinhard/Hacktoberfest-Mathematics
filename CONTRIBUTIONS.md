@@ -7,3 +7,4 @@
 /area_of_mathematics/general_formula/formula/language/file
 ex: /algebra/distance_formula/3d_distance_formula/java/3d_distance_formula.java
 ```
+[@Dikshapurswani](https://github.com/Dikshapurswani)
