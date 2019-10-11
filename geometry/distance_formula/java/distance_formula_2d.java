@@ -1,3 +1,5 @@
+// finding distance between 2 points in 2d
+
 public class DistanceFormula2d {
 
     public static double distanceFormula2d(double x1, double y1, double x2, double y2) {

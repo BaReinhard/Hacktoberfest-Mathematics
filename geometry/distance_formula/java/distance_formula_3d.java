@@ -1,3 +1,5 @@
+// finding distance between 2 points in 3d
+
 public class DistanceFormula3d {
 	
     public static double distanceFormula3d(double x1, double y1, double z1, double x2, double y2, double z2) {
