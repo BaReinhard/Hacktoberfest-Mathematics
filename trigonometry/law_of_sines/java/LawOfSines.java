@@ -2,6 +2,10 @@ import static java.lang.Math.sin;
 import static java.lang.Math.asin;
 import static java.lang.Math.toRadians;
 
+import java.text.DecimalFormat;
+
+import static java.lang.Math.toDegrees;
+
 import java.util.Arrays;
 
 /** Utility methods using the Law of Sines. */
@@ -27,18 +31,11 @@ public class LawOfSines {
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T extends Object> T getAngle(double sideA, double angleA, double sideB) {
+		if (angleA <= 0 || angleA >= 180) { throw new IllegalArgumentException("Invalid angle value recieved"); }
 		double height = sideB * sin(toRadians(angleA));
-		double calcAngleB = asin((sideB * sin(toRadians(angleA))) / sideA);
-		System.out.println();
-		if (sideA > sideB) { 
-			//one solution case
-			return (T) Double.valueOf(calcAngleB);
-		} else if (sideA > height) {
-			//two solutions case
-			return (T) Arrays.asList(calcAngleB, 180 - calcAngleB);
-		} else {
-			//no solution case
-			return (T) "No triangle can be formed";
-		}
+		double calcAngleB = Double.valueOf(new DecimalFormat("#.####").format(toDegrees(asin(height / sideA))));
+		return (T) ((sideA > sideB) ? Double.valueOf(calcAngleB) //one solution
+				: (sideA > height) ? Arrays.asList(calcAngleB, 180 - calcAngleB)  //two solutions
+				: "No triangle can be formed"); //no solutions
 	}
 }
