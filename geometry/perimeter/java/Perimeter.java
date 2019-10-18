@@ -68,6 +68,18 @@ public class Perimeter
      */
     double trapezoid(double height, double base1, double base2)
     {
-    	return height * (base1 + base2)/2;
+	/* 
+	 * 		       b1
+		  	 _______________
+			/ |	        \	
+		       /  | h		 \
+		      /   |		  \
+		     /____|________________\
+		       x        b2
+	 */
+	double small = Math.max(base1, base2); 
+	double big = Math.min(base1, base2); 
+	double x = (big - small) / 2; 
+	double hypo = Math.sqrt((height * height + x * x); 
     }
 }
