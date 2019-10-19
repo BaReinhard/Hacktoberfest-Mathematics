@@ -68,7 +68,7 @@ public class Perimeter
      */
     double trapezoid(double height, double base1, double base2)
     {
-	/* 
+	/* Assuming the Trapezoid is isoceles in nature. 
 	 * 		       b1
 		  	 _______________
 			/ |	        \	
@@ -81,5 +81,6 @@ public class Perimeter
 	double big = Math.min(base1, base2); 
 	double x = (big - small) / 2; 
 	double hypo = Math.sqrt((height * height + x * x); 
+	return (b1 + b2 + 2 * hypo); 
     }
 }
