@@ -80,7 +80,7 @@ public class Perimeter
 	double small = Math.max(base1, base2); 
 	double big = Math.min(base1, base2); 
 	double x = (big - small) / 2; 
-	double hypo = Math.sqrt((height * height + x * x); 
+	double hypo = Math.sqrt(height * height + x * x); 
 	return (base1 + base2 + 2 * hypo); 
     }
 }
