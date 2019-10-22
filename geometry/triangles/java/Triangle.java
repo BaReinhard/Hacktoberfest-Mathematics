@@ -48,5 +48,54 @@ public class Triangle {
         return Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
         
     }
+
+
+    /**
+     * 
+     * Given the sides of triangle check if it's Equilateral
+     * 
+     * @param side1
+     * @param side2
+     * @param side3
+     * @return true or false
+     */
+    public static boolean isEquilateral(double side1, double side2, double side3){
+        if (side1 == side2 && side1 == side3)
+            return true;
+        else
+            return false;    
+    }
     
+    /**
+     * 
+     * Given the sides of triangle check if it's Scalene
+     * 
+     * @param side1
+     * @param side2
+     * @param side3
+     * @return true or false
+     */
+    public static boolean isScalene(double side1, double side2, double side3){
+        if((side1 != side2 && side1 != side3) && side2 != side3)
+            return true;
+        else 
+            return false;
+    }
+
+    /**
+     * 
+     * Given the sides of triangle check if it's Isosceles
+     * 
+     * @param side1
+     * @param side2
+     * @param side3
+     * @return true or false
+     */
+    public static boolean isIsosceles(double side1, double side2, double side3){
+        if(side1 == side2 || side2 ==side3 || side1 == side3)
+            if(!isEquilateral(side1, side2, side3))
+                return true;
+        else
+            return false;    
+    }
 }
