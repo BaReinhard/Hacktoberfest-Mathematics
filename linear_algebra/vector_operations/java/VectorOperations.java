@@ -44,4 +44,19 @@ public class VectorOperations {
         }
     
     }
+    
+    public static double[] crossProduct3By3(double[] vector1, double[] vector2){
+    double[] crossProduct = new double[3];
+        if(vector1.length==vector2.length && vector1.length = 3){
+            double determinantI = vector1[1]*vector2[2] - vector1[2]*vector2[1];
+            double determinantJ = vector1[0]*vector2[2] - vector1[2]*vector2[0];
+            double determinantK = vector1[0]*vector2[1] - vector1[1]*vector2[0];
+            crossProduct = {determinantI, -determinantJ, determinantK};
+            return crossProduct;
+        } else {
+            System.out.println("Dimensions of vectors do not match, or dimension is not a 3 by 3 matrix!");
+            return null;
+        }
+    }
+    
 }
