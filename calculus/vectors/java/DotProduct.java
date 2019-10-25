@@ -1,6 +1,6 @@
 public class DotProduct
 {
-	/** Calculate the dot product of two vectors of
+	/** Calculate the dot product of two vectors of the
 	 *  equal arbitrary length represented by double arrays
 	 * @param {double[]} v1 - first vector
 	 * @param {double[]} v2 - second vector
