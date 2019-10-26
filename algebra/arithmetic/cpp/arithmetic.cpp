@@ -4,7 +4,7 @@
 using namespace  std;
 
 /*
-  this repo contains functions like cube_root, square_root, digit_sum
+  this repo contains functions like cube_root, square_root, digit_sum, exponent_sum
 
   THE TYPE OF DATA I AM CHOOSING IS INT
 */
@@ -50,6 +50,10 @@ public:
 
     return sum; // returning the sum
   }
+  
+  static int exponent_sum(int valueOne, int valueTwo) //returns exponentiation of valueOne to power of valueTwo (valueOne ^ valueTwo)
+  {
+    return pow(valueOne, valueTwo); //restricted by size of int value
 };
 
 int main() {
