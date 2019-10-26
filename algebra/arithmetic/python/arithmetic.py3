@@ -37,10 +37,16 @@ class arithmetic():
         return total   # returning the sum
     pass
 
+    # method to calculte exponentials
+    def exponential(self, exp):
+        return num ** exp
+    pass
+
 
 # demo begins her
 num = 169  # number on which operations will be occures
 decimal_digit = 5  # number of places of decimal
+expon = 5 # exponent
 
 eight = arithmetic(num)   # object of class arithmetic
 
@@ -48,3 +54,4 @@ eight = arithmetic(num)   # object of class arithmetic
 print("square root of", num, "is", eight.square_root(decimal_digit))
 print("cube root of", num, "is", eight.cube_root(decimal_digit))
 print("sum of digits of", num, "is", eight.digit_sum(decimal_digit))
+print("the exponential of", num, "is", eight.exponential(expon))
