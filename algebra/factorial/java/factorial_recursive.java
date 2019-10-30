@@ -1,5 +1,4 @@
 // Author: Brett Reinhard
-import java.rmi.server.ExportException;
 
 public class Mathematics {
     public static long factorial(long number){
