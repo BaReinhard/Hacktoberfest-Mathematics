@@ -15,7 +15,7 @@ b = float(input("Give the second side length in a number: "))
 if b <= 0 or b >= 1000:
     b = float(input("That's an inavlid length. Try again: "))
 else:
-    print("Thank you.")
+    print("Thank you!!")
 
 print("Now that we have the two sides, let's solve it.")
 
