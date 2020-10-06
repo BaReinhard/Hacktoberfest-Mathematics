@@ -1,3 +1,6 @@
+//A header that provides a 2D vector struct as well as some utility functions
+//Created 5/10/20 by Exonorid
+
 #ifndef HKTBFEST_VEC2
 #define HTKBFEST_VEC2
 
@@ -37,14 +40,14 @@ public:
   constexpr const vec2 normalize() const;
 };
 
-constexpr double magnitude(vec2 &vec) {
+constexpr double magnitude(const vec2 &vec) {
   double x = vec.getX();
   double y = vec.getY();
   return sqrt((x * x) + (y * y));
 }
 
 constexpr const vec2 vec2::normalize() const {
-  const vec2 *self = this;
+  const vec2 &self = *this;
   double mag = magnitude(self);
   return vec2(x / mag, y / mag);
 }
