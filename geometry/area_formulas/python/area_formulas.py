@@ -26,3 +26,9 @@ def sphere(radius):
 
 def sector(radius,angle):
     return radius*radius*angle*(1./2)
+
+def octagon_area(side): 
+    return (2 * (1 + (math.sqrt(2))) * side * side)     
+
+def hexagon_area(side): 
+    return ((side * side) * ((3 * math.sqrt(3))/2)) 
