@@ -45,4 +45,39 @@ public class ElectricFields {
         if(distance <= 0) throw new IllegalArgumentException("Never seen a negative distance.");
         return voltage/distance;
     }
+
+    /**
+     * Calculate the electrical potential at a distance r from a source charge q is
+     * @param charge {double} - source charge
+     * @param distance {double} - the distance from the source
+     * @return {double} Electrical potential
+     */
+    public static double electricPotentialFromSourceCharge(double charge, double distance){
+        if(distance <= 0) throw new IllegalArgumentException("Never seen a negative distance.");
+        return charge/(4*Math.PI*E_FIELD_CONSTANT*distance);
+    }
+
+    /**
+     * The magnitude of the force between two electrically charged objects to be
+     * @param charge1 {double} - charge 1
+     * @param charge2 {double} - charge 2
+     * @param distance {double} - the distance between charges
+     * @return {double}  magnitude of the force between two electrically charged objects
+     */
+    public static double electricPotentialFromSourceCharge(double charge1, double charge2, double distance){
+        if(distance <= 0) throw new IllegalArgumentException("Never seen a negative distance.");
+        return (charge1*charge2)/(4*Math.PI*E_FIELD_CONSTANT*distance*distance);
+    }
+
+    /**
+     * The only preferred directions are radially inward or outward, and we associate those directions with the sign of the source. The force felt by a test particle in this field is
+     * @param charge {double} - charge placed in the electric field
+     * @param efield {double} -  electric field
+     * @return {double}  force F felt by a test particle in the field E
+     */
+    public static double electricPotentialFromSourceCharge(double charge, double efield){
+        return (charge*efield);
+    }
+
+
 }
