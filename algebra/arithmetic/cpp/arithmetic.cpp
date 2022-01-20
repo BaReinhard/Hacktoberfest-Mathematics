@@ -39,15 +39,16 @@ public:
   */
   static int digit_sum(int value) // returns the sum of digits of a number
   {
-    int sum = 0;   // a value declared to store the sum and initialised to 0
+    int sum = 0,count=0;   // a value declared to store the sum and initialised to 0
 
     // loop body will be executed untill and unless all numbers are being traversed
     while(value!=0)
     {
       sum += value % 10;   // adding sum -> previous addition with new number
       value /= 10;    // dividing by 10 to get new number
+      count++;
     }
-
+    cout<<"Number of digits = "<<count<<endl;
     return sum; // returning the sum
   }
 };
