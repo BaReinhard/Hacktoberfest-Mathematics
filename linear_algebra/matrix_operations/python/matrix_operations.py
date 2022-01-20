@@ -24,3 +24,11 @@ def multiply_scalar(A, k):
         for j in range(len(A[0])):
             C[i][j] = A[i][j] * k
     return C
+
+def subtract_matrix(A, B):
+    assert len(A) == len(B) and len(A[0]) == len(B[0])
+    C = [[0]*len(A[0]) for i in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            C[i][j] = A[i][j] - B[i][j]
+    return C
